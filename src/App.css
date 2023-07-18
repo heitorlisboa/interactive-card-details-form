@@ -33,6 +33,15 @@
   padding: 0.5rem;
   border: 1px solid var(--light-grayish-violet);
   border-radius: 0.5rem;
+  outline: none;
+}
+
+.input:focus-visible {
+  border-color: var(--active-input-border-color);
+}
+
+.input[data-invalid='true'] {
+  border-color: var(--red);
 }
 
 .input::placeholder {
