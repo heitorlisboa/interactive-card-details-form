@@ -5,7 +5,8 @@ import './App.css';
 import { Form } from './components/Form';
 import { Success } from './components/Success';
 
-import backgroundImage from './assets/bg-main-desktop.png';
+import backgroundImageMobile from './assets/bg-main-mobile.png';
+import backgroundImageDesktop from './assets/bg-main-desktop.png';
 import cardLogo from './assets/card-logo.svg';
 import cardFrontImage from './assets/bg-card-front.png';
 import cardBackImage from './assets/bg-card-back.png';
@@ -31,7 +32,12 @@ function App() {
   return (
     <div className="page-container">
       <div className="image-container">
-        <img src={backgroundImage} alt="" />
+        <img className="mobile-background" src={backgroundImageMobile} alt="" />
+        <img
+          className="desktop-background"
+          src={backgroundImageDesktop}
+          alt=""
+        />
 
         <div className="card-front">
           <img src={cardFrontImage} alt="" />
