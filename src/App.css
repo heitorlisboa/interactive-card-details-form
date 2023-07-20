@@ -1,3 +1,66 @@
+.page-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  display: block;
+  max-height: 100vh;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 20px hsl(0 100% 0% / 0.1);
+}
+
+.card-front {
+  bottom: calc(50% + 1rem);
+  left: 25%;
+}
+
+.card-back {
+  top: calc(50% + 1rem);
+  left: 40%;
+}
+
+.card-info {
+  color: var(--white);
+  text-transform: uppercase;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto auto;
+  align-content: flex-end;
+  gap: 1rem;
+  padding: 1.25rem 1.75rem;
+}
+
+.card-number {
+  grid-column: span 2;
+  font-size: 1.75rem;
+  letter-spacing: 0.1rem;
+}
+
+.card-cvc {
+  position: absolute;
+  right: 14%;
+  bottom: 46%;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 .form {
   font-size: 1.125rem;
   display: flex;
@@ -59,7 +122,7 @@
   gap: 1.5rem;
 }
 
-.submit-button {
+.button {
   background-color: var(--very-dark-violet);
   color: var(--white);
   font-family: inherit;
@@ -68,4 +131,34 @@
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+.success-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 24rem;
+}
+
+.success-container button {
+  align-self: stretch;
+}
+
+.success-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.success-title {
+  line-height: 1;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.success-description {
+  color: var(--dark-grayish-violet);
+  line-height: 1;
 }
